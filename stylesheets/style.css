@@ -521,9 +521,10 @@ span.toolong {
 }
 
 div.blotter {
-  color: red;
+  color: black;
   font-weight: bold;
   text-align: center;
+  font-size:12px;
 }
 
 table.mod.config-editor {
