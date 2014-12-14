@@ -6,6 +6,10 @@
 require 'inc/functions.php';
 require 'inc/anti-bot.php';
 
+// Fix for CloudFlare
+if (isset($_SERVER['HTTP_CF_CONNECTING_IP']))
+	$_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+
 // Fix for magic quotes
 if (get_magic_quotes_gpc()) {
 	function strip_array($var) {

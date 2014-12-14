@@ -4,6 +4,10 @@
 	if (!$config['search']['enable']) {
 		die(_("Post search is disabled"));
 	}
+	
+	// Fix for CloudFlare
+	if (isset($_SERVER['HTTP_CF_CONNECTING_IP']))
+		$_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
 
 	$queries_per_minutes = $config['search']['queries_per_minutes'];
 	$queries_per_minutes_all = $config['search']['queries_per_minutes_all'];
