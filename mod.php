@@ -57,8 +57,8 @@ $pages = array(
 	'/reports'				=> 'reports',			// report queue
 	'/reports/(\d+)/dismiss(all)?'		=> 'secure report_dismiss',	// dismiss a report
 	
-	'/IP/([\w.:]+)'				=> 'secure_POST ip',		// view ip address
-	'/IP/([\w.:]+)/remove_note/(\d+)'	=> 'secure ip_remove_note',	// remove note from ip address
+	'/IP/(.+?)/remove_note/(\d+)'	=> 'secure ip_remove_note',	// remove note from ip address
+	'/IP/(.+?)'				=> 'secure_POST ip',		// view ip address
 	
 	'/ban'					=> 'secure_POST ban',		// new ban
 	'/bans'					=> 'secure_POST bans',		// ban list
